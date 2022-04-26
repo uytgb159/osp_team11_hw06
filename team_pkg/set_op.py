@@ -1,5 +1,5 @@
 #made by koo
-#output union and intersection of set
+#operate union and intersection of set
 from ctypes import Union
 
 def setop():
