@@ -1,15 +1,20 @@
 #!/usr/bin/python
 
-def fibo(num):
-        if(num == 1 or num  == 2):
-                return 1
-        else:
-                return(fibo(num-2) + fibo(num-1))
-
-
+def fibo():
+    num=int(input("fibonacci number: "))
+    if(num<1):
+        print("wrong number")
+        return
+    elif(num==1):
+        print(1)
+        print("F1 = 1")
+    else:
+        f=[0,1]
+        print(f[1])
+        for i in range(2, num+1, 1):
+            f.append(f[i-1]+f[i-2])
+            print(f[i],end=' ')
+    print("\nF%d = %d"%(num, f[num]))
+    
 if __name__=='__main__':
-        num = int(input("fibonacci input: "))
-        for i in range(1,num+1,1):
-                print(fibo(i))
-
-        print("F%d = %d" %(num,fibo(num)))
+    fibo()
